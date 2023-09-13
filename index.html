@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inglemoor HOSA - Future Health Professionals</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @font-face {
+      font-family: "Conneqt Regular";
+      src: url("ConneqtRegular/ConneqtRegular.ttf") format("truetype");
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Conneqt Regular", sans-serif;
+      background-color:rgba(0, 0, 0, 1);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .content {
+      height: 100vh; /* Set the height of the content container */
+      overflow: auto; /* Enable scrolling when content exceeds container height */
+      padding: 20px; /* Add some padding to the content */
+    }
+    .reveal {
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: transform 1s ease, opacity 1s ease;
+    }
+    .reveal.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    /* #important-dates {
+        background-image: url("images/image.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; /* Red background for Section 1 
+    }
+    #resources {
+      background-image: url("images/background3.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; /* Green background for Section 2 
+    }
+    #section3 {
+        background-color: #0000ff; /* Blue background for Section 3 
+    }*/
+    .button {
+      border: none;
+      color: darkblue;
+      padding: 15px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 30px; /* Added to round the corners */
+      background-color: lightblue; /* Added to set a background color */
+      font-family: 'Conneqt Regular', sans-serif; 
+      transition: background-color 0.3s, color 0.3s; /* Added for smooth transition */
+    }
+    .small-button {
+      width: 100px; /* Set the desired width */
+      height: 100px; /* Set the desired height */
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      outline: none; /* Remove the outline */
+    }
+
+
+    .button:hover {
+      background-color: darkblue; /* Change background color on hover */
+      color: white; /* Change text 
+      color on hover */
+    }
+    .small-image {
+      max-width: 100%; /* Shrink the image to fit within the button */
+      max-height: 100%; /* Shrink the image to fit within the button */
+    }
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .title {
+      color: rgb(29, 39, 79);
+      font-size: 18px;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+    }
+
+    button:hover, a:hover {
+      opacity: 0.7;
+    }
+
+    header {
+      padding: 10px;
+    }
+    .headerother{
+      background-color : transparent;
+      padding: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #8ee9e2;
+    }
+
+    .bio-content {
+      position: relative; 
+      top: 100%; 
+      left: 0; 
+      width: 100%;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .bio-content.active {
+
+      opacity: 1;
+      max-height: 1000px;
+    }
+    .card-container.active .bio-content {
+      transform: scaleY(1);
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav style="display: flex; align-items: center;">
+      <img style="max-width: 7%; height: auto;">
+      <p style="font-family: 'Conneqt Regular'; color: white; font-size: 25px;""> Inglemoor HOSA </p>
+      <ul style="display: flex; list-style-type: none; padding: 0; margin: 0; margin-left: auto; align-items: center;">
+        <button class="small-button" onclick = "handleButtonClick()">
+          <img src="images/instagramlogo.png" style="max-width: 30%; height: auto; margin-left: 50px;">
+        </button>
+        <li style="margin-right: 10px;"><a href="#home">Home</a></li>
+        <li style="margin-right: 10px;"><a href="#dates">Dates</a></li>
+        <li style="margin-right: 10px;"><a href="#team">Exec</a></li>
+        <li style="margin-right: 10px;"><a href="https://drive.google.com/drive/u/1/folders/1cT06NpDMeBS0UHMZ0a4pTnC7VfV1h9yB" target="_blank">Resources</a></li>
+      </ul>
+    </nav>
+  </header>  
+
+  <div id="home" style="display: flex; align-items: center; justify-content: center; height: 90vh;">
+    <div style="text-align: center;">s
+      <img src = "images/hosalogo.png">
+      <p style="font-family: 'Conneqt Regular'; color: white; font-size: 30px;">
+        Welcome!
+      </p>
+      <button class="button">
+        Join Us!
+      </button>
+    </div>
+    <!-- Home content goes here -->
+  </div>
+  
+  <section id="dates" class="content reveal">
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <h1 style="font-family: 'Conneqt Regular'; color: white; font-size: 40px;">Important Dates</h1>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <!-- Important Dates content goes here -->
+      <embed type="text/html" src="calendar.html" width="1000" height="700">
+    </div>
+    
+  </section>
+
+
+  <section id="team" class="content reveal">
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <h1 style="font-family: 'Conneqt Regular'; color: white; font-size: 40px;">DECA Executive Team</h1>
+    </div>
+    <div class = "card-container">
+      <div class="card">
+        <img src="images/hosalogo.png" style="width:100%">
+        <h1 style="font-family: 'Conneqt Regular'; color: rgb(29, 39, 79);">Emily Mo</h1>
+        <p class="title">Co-President</p>
+        <button class="small-button" id="emailButton;" style = "justify-content: left;">
+          <img src = "images/emailicon.png" style="max-width: 50%; height: auto;">
+        </button>
+        <button class="small-button" id="bioButton" onclick="toggleBioBox(this)" style = "justify-content: right;">
+          <img src = "images/bioicon.png" style="max-width: 50%; height: auto;">
+        </button>
+        <div class="bio-content" id="bioBox"> <!-- Use a new div for the bio content -->
+          <!-- Bio content goes here -->
+          <p style="font-family: 'Conneqt Regular'; color: rgb(29, 39, 79); padding: 20px; text-align: left;">
+            My name is Emily Mo, a Senior at Inglemoor High School. 
+            I’ve been in DECA all of high school and have competed entirely in finance-related events: Financial Consulting during my Freshman year and Financial Services in the later two. 
+            Through these competitions, I’ve traveled to places from Atlanta, Georgia, to Orlando, Florida. 
+            At each conference, I was able to make friends, develop new skills, and get a step closer to becoming the Finance Bro I aspire to be. 
+            Besides DECA, I enjoy watching Chinese Drama, listening to music, eating fruits, and doing martial arts(kungfu!🐼). 
+            If you share any of these hobbies or have any questions, please approach me anytime- I love children and can’t wait to meet you all this year. 
+          </p>
+        </div>
+      </div>
+
+    
+
+    
+    </div>
+  </section>
+  
+  
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const revealElements = document.querySelectorAll('.reveal');
+
+      function revealOnScroll() {
+        for (let i = 0; i < revealElements.length; i++) {
+          const windowHeight = window.innerHeight;
+          const revealTop = revealElements[i].getBoundingClientRect().top;
+          const revealPoint = 150;
+
+          if (revealTop < windowHeight - revealPoint) {
+            revealElements[i].classList.add('active');
+          }
+        }
+      }
+
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+    });
+  </script>
+  <script>
+    function handleButtonClick() {
+      window.location.href = 'https://www.instagram.com/inglemoorhosa/?hl=en'; // Replace 'https://example.com' with the desired page URL
+    }
+  </script>
+  <script>
+    function toggleBioBox() {
+      var bioBox = document.getElementById("bioBox");
+      bioBox.classList.toggle("active"); // Toggle the "active" class on the bio box
+    }
+  </script>
+  <script>
+    function toggleBioBox(button) {
+      var bioBox = button.nextElementSibling;
+      bioBox.classList.toggle("active")
+    }
+  </script>
+</body>
+</html>

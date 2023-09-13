@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Conneqt';
+    src: local('Conneqt Regular'), local('Conneqt-Regular'),
+        url('ConneqtRegular.woff2') format('woff2'),
+        url('ConneqtRegular.woff') format('woff'),
+        url('ConneqtRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
